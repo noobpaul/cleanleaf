@@ -40,6 +40,10 @@ a {
   -o-transition: 0.5s;
   transition: 0.5s;
 }
+.a-style{
+  font-size: 20px;
+  color: black;
+}
 .padding20  {
   padding-left: 100px;
 }
@@ -55,6 +59,46 @@ a {
 .w3-animate-opacity{-webkit-animation:opac 0.8s;animation:opac 0.8s}
 @-webkit-keyframes opac{from{opacity:0} to{opacity:1}}
 @keyframes opac{from{opacity:0} to{opacity:1}}
+
+/* ==================================================
+  About
+  ================================================== */
+.about-style {
+  display: table;
+  position: relative;
+  background-image: url(../img/4.jpg);
+  background-size: cover;
+  padding-top: 20px 0;
+  color: #fff;
+  width: 100%;
+  height: 100vh;
+}
+
+.about-style:after {
+  content: '';
+  z-index: 0;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.4);
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+
+.about-style .container {
+  position: relative;
+  z-index: 1;
+}
+
+.about-text-style{
+  font-family: "Raleway", Helvetica, Arial, sans-serif;
+  font-size: 50px;
+  color: #0c7515;
+  font-weight: 800;  
+}
+.about-content-style{
+  font-size: 20px;
+}
 
 /* ==================================================
   Elements
