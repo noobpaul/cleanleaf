@@ -122,7 +122,6 @@
           <div class="portfolio-over">
             <div>
               <h3 class="card-title">
-                Thermal Destruction
               </h3>
 
             </div>

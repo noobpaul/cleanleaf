@@ -10,11 +10,11 @@
 
     @include('partials.welcome.parallax')
 
-    @include('partials.welcome.features')
+    <!-- @include('partials.welcome.features') -->
 
     @include('partials.welcome.portfolio')
 
-    @include('partials.welcome.team')
+    <!-- @include('partials.welcome.team') -->
 
     @include('partials.welcome.contact')
 

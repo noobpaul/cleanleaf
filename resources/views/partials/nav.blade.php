@@ -8,9 +8,9 @@
     <nav id="nav-menu-container">
       <ul class="nav-menu">
         <li><a href="#about">About Us</a></li>
-        <li><a href="#features">Services</a></li>
+        <!-- <li><a href="#">Services</a></li> -->
         <li><a href="#portfolio">Facilities and Equipments</a></li>
-        <li><a href="#team">Officers</a></li>
+        <!-- <li><a href="#team">Officers</a></li> -->
         <li><a href="#contact">Contact Us</a></li>
       </ul>
     </nav><!-- #nav-menu-container -->
