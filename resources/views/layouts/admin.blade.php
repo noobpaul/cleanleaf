@@ -39,7 +39,7 @@
   </head>
 
   <body>
-    <div class="mgb100"></div>
+    <div class="mgb50"></div>
 
     @yield('content')
 

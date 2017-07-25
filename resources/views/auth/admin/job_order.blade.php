@@ -12,8 +12,8 @@
 				<div class="panel panel-default">
 					<div class="panel-body">
 						<ul class="nav nav-pills nav-stacked">
-							<li class="active"><a href="#">Documents</a></li>
-							<li><a href="{{ route('adminJobOrder',$user->username) }}">Job Order</a></li>
+							<li><a href="{{ route('admin',$user->username) }}">Documents</a></li>
+							<li class="active"><a href="#">Job Order</a></li>
 							<li><a href="#">Articles</a></li>
 							<li><a href="#">Website</a></li>
 							<li><a href="#">Account Executives</a></li>
