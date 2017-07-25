@@ -1,8 +1,29 @@
 .mgb100 {
   margin-bottom: 100px;
 }
+.mgb50 {
+  margin-bottom: 50px;
+}
 .mgb15 {
   margin-bottom: 15px;
+}
+.mgb30 {
+  margin-bottom: 30px;
+}
+.mgb45 {
+  margin-bottom: 45px;
+}
+.mgr5 {
+  margin-right: 5px;
+}
+.mgr15 {
+  margin-right: 15px;
+}
+.ht50 {
+  height: 50px;
+}
+.fs20 {
+  font-size: 20px;
 }
 
 .google-maps {

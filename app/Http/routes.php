@@ -19,6 +19,12 @@ Route::auth();
 
 Route::get('admin/{username}', 'AdminController@admin')->name('admin');
 
+Route::get('admin/{username}/job-order', 'AdminController@adminJobOrder')->name('adminJobOrder');
+
 Route::get('admin/{username}/settings', 'AdminController@adminSettings')->name('adminSettings');
 
 Route::patch('admin/{username}/settings', 'AdminController@adminSettingsUpdate')->name('adminSettingsUpdate');
+
+Route::patch('admin/{username}/password', 'AdminController@adminPasswordUpdate')->name('adminPasswordUpdate');
+
+Route::patch('admin/{username}/image', 'AdminController@adminImage')->name('adminImage');
