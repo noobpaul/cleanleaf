@@ -19,11 +19,23 @@
 .mgr15 {
   margin-right: 15px;
 }
+.mgl15 {
+  margin-left: 15px;
+}
+.mgl30 {
+  margin-left: 30px !important;
+}
+.pdl30 {
+  padding-left: 30px !important;
+}
 .ht50 {
   height: 50px;
 }
 .fs20 {
   font-size: 20px;
+}
+.fc-blue {
+  color: #337ab7;
 }
 
 .google-maps {

@@ -15,11 +15,11 @@ class Admin
      */
     public function handle($request, Closure $next)
     {
-        if ($request->user()->role != 'admin')
+        $user = $request->user();
+        if ($user && $user->isAdmin())
         {
-            return view('errors.503');
+            return $next($request);
         }
-
-        return $next($request);
+        return view('errors.503');
     }
 }

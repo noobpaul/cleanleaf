@@ -40,26 +40,35 @@
 
   <body>
     <div class="mgb50"></div>
+    <div class="container">
+        <div class="row mgb15">
+            <div class="col-lg-3">
+                <img src="{{ asset($user->image) }}" class="img-responsive img-circle img-thumbnail ht50 mgr5"><span class="fs20">{{ $user->name }}</span>
+            </div>
+            <div class="col-lg-3 col-lg-offset-6">
+                <div class="pull-right">
+                    <a href="{{ url('/logout') }}"
+                          onclick="event.preventDefault();
+                                   document.getElementById('logout-form').submit();">
+                          <span class="fa fa-sign-out"></span>  Logout
+                      </a>
 
-    @yield('content')
+                      <form id="logout-form" action="{{ url('/logout') }}" method="get" style="display: none;">
+                          {{ csrf_field() }}
+                      </form>
+                </div>
+            </div>
+        </div>
+
+        @yield('content')
+
+    </div>
 
     <!-- Required JavaScript Libraries -->
-    <script src="lib/jquery/jquery.min.js"></script>
-    <script src="lib/superfish/hoverIntent.js"></script>
-    <script src="lib/superfish/superfish.min.js"></script>
-    <script src="lib/tether/js/tether.min.js"></script>
-    <script src="lib/stellar/stellar.min.js"></script>
-    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
-    <script src="lib/counterup/counterup.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/easing/easing.js"></script>
-    <script src="lib/stickyjs/sticky.js"></script>
-    <script src="lib/parallax/parallax.js"></script>
-    <script src="lib/lockfixed/lockfixed.min.js"></script>
-    
-    <script src="js/custom.js"></script>
-    
-    <script src="contactform/contactform.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="{{ asset('lib/bootstrap/js/bootstrap.min.js') }}"></script>
+
+    @yield('scripts')
     
   </body>
 </html>

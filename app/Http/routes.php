@@ -19,7 +19,15 @@ Route::auth();
 
 Route::get('admin/{username}', 'AdminController@admin')->name('admin');
 
+Route::get('admin/{username}/register', 'AdminController@adminRegisterView')->name('adminRegisterView');
+
+Route::post('admin/{username}/register', 'AdminController@adminRegisterPost')->name('adminRegisterPost');
+
 Route::get('admin/{username}/job-order', 'AdminController@adminJobOrder')->name('adminJobOrder');
+
+Route::post('admin/{username}/job-order', 'AdminController@adminJobOrderPost')->name('adminJobOrderPost');
+
+Route::get('admin/job-order-pdf/{id}/view', 'AdminController@adminJobOrderPdf')->name('adminJobOrderPdf');
 
 Route::get('admin/{username}/settings', 'AdminController@adminSettings')->name('adminSettings');
 
