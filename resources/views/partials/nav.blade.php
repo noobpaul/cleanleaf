@@ -26,6 +26,8 @@
           </a>
           <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dLabel">
             <li><a href="{{ route('admin',Auth::user()->username) }}">Admin Page</a></li>
+            <li><a href="{{ route('adminJobOrder',Auth::user()->username) }}">Job Order</a></li>
+            <li><a href="{{ route('adminRegisterView',Auth::user()->username) }}">Register Account</a></li>
             <li><a href="{{ route('adminSettings',Auth::user()->username) }}">Account Settings</a></li>
             <li>
               <a href="{{ url('/logout') }}"
