@@ -76,12 +76,26 @@
 					</div>
 					<div class="table-responsive">
 						<table class="table table-striped">
+							<thead>
+								<tr>
+									<th>Name</th>
+									<th>Date</th>
+									<th>Status</th>
+								</tr>
+							</thead>
 							<tbody>
 								@foreach($job_orders as $job_order)
 								<tr>
 									<td>{{ $job_order->name }}</td>
 									<td>{{ date_format($job_order->created_at, 'm-d-Y') }}</td>
-									<td><a href="{{ route('adminJobOrderPdf',$job_order->id) }}"><button class="btn btn-primary">View</button></a></td>
+									<td>{{ $job_order->status }}</td>
+									<td>
+										<a href="{{ route('adminJobOrderPdf',$job_order->id) }}"><button class="btn btn-primary">View</button></a>
+									</td>
+									<td>
+										<a href="{{ route('adminJobOrderAccept',[$user->username,$job_order->id]) }}"><button class="btn btn-success">Accept</button></a>
+										<a href="{{ route('adminJobOrderReject',[$user->username,$job_order->id]) }}"><button class="btn btn-danger">Reject</button></a>
+									</td>
 								</tr>
 								@endforeach
 							</tbody>
