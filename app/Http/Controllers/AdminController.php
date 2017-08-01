@@ -8,12 +8,13 @@ use App\User;
 use App\JobOrder;
 use Image;
 use PDF;
+use Mail;
 
 class AdminController extends Controller
 {
 	public function __construct() {
 		$this->middleware('auth');
-		$this->middleware('admin', ['only' => ['adminRegisterView','adminRegisterPost']]);
+		$this->middleware('admin', ['only' => ['adminRegisterView','adminRegisterPost','adminJobOrderAccept','adminJobOrderReject']]);
 	}
 
     public function admin($username) {
@@ -65,7 +66,10 @@ class AdminController extends Controller
             'remarks' => 'required',
     		]);
 
+    	$admins = User::where('role','admin')->get();
+
     	$job_order = new JobOrder;
+    	$job_order->user_id = $user->id;
     	$job_order->name = $request->name;
     	$job_order->client_name = $request->client_name;
     	$job_order->address = $request->address;
@@ -74,6 +78,15 @@ class AdminController extends Controller
     	$job_order->remarks = $request->remarks;
     	$job_order->save();
 
+    	Mail::send('partials.mails.staff', ['job_order' => $job_order], function ($message) use ($user,$admins)
+        {
+            $message->from($user->email, $user->name);
+            foreach ($admins as $admin) {
+	            $message->to($admin->email);
+            }
+
+        });
+
     	return redirect()->route('adminJobOrder',$user->username)->with('user',$user);
     }
 
@@ -81,6 +94,44 @@ class AdminController extends Controller
     	$job_order = JobOrder::find($id);
     	$pdf = PDF::loadView('partials.pdf.job_order_pdf',['job_order' => $job_order]);
     	return $pdf->stream('job_order.pdf');
+    }
+
+    public function adminJobOrderAccept($username, $id) {
+    	$user = User::where('username', $username)->first();
+
+    	$job_order = JobOrder::find($id);
+    	$job_order->status = true;
+    	$job_order->update();
+
+    	$send_to = $job_order->user;
+
+    	Mail::send('partials.mails.status', ['job_order' => $job_order, 'user' => $user ], function ($message) use ($user,$send_to)
+        {
+            $message->from($user->email, $user->name);
+            $message->to($send_to->email);
+
+        });
+
+    	return redirect()->route('adminJobOrder',$user->username)->with('user',$user);
+    }
+
+    public function adminJobOrderReject($username, $id) {
+    	$user = User::where('username', $username)->first();
+    	
+    	$job_order = JobOrder::find($id);
+    	$job_order->status = false;
+    	$job_order->update();
+
+    	$send_to = $job_order->user;
+
+    	Mail::send('partials.mails.status', ['job_order' => $job_order, 'user' => $user ], function ($message) use ($user,$send_to)
+        {
+            $message->from($user->email, $user->name);
+            $message->to($send_to->email);
+
+        });
+
+    	return redirect()->route('adminJobOrder',$user->username)->with('user',$user);
     }
 
     public function adminSettings($username) {

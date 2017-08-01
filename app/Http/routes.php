@@ -29,6 +29,10 @@ Route::post('admin/{username}/job-order', 'AdminController@adminJobOrderPost')->
 
 Route::get('admin/job-order-pdf/{id}/view', 'AdminController@adminJobOrderPdf')->name('adminJobOrderPdf');
 
+Route::get('admin/{username}/job-order/{id}/accept', 'AdminController@adminJobOrderAccept')->name('adminJobOrderAccept');
+
+Route::get('admin/{username}/job-order/{id}/reject', 'AdminController@adminJobOrderReject')->name('adminJobOrderReject');
+
 Route::get('admin/{username}/settings', 'AdminController@adminSettings')->name('adminSettings');
 
 Route::patch('admin/{username}/settings', 'AdminController@adminSettingsUpdate')->name('adminSettingsUpdate');

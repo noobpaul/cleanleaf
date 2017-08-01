@@ -14,13 +14,15 @@ class CreateJobOrdersTable extends Migration
     {
         Schema::create('job_orders', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('user_id')->unsigned();
+            $table->foreign('user_id')->references('id')->on('users');
             $table->string('name');
             $table->string('client_name');
             $table->string('address');
             $table->string('contact_number');
             $table->longText('particular');
             $table->longText('remarks');
-            $table->boolean('status');
+            $table->boolean('status')->nullable()->default(null);
             $table->timestamps();
         });
     }
