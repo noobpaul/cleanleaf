@@ -1,8 +1,5 @@
-.mgb100 {
-  margin-bottom: 100px;
-}
-.mgb50 {
-  margin-bottom: 50px;
+.mgb5 {
+  margin-bottom: 5px;
 }
 .mgb15 {
   margin-bottom: 15px;
@@ -12,6 +9,15 @@
 }
 .mgb45 {
   margin-bottom: 45px;
+}
+.mgb50 {
+  margin-bottom: 50px;
+}
+.mgb100 {
+  margin-bottom: 100px;
+}
+.mgt15 {
+  margin-top: 15px;
 }
 .mgr5 {
   margin-right: 5px;
@@ -25,11 +31,34 @@
 .mgl30 {
   margin-left: 30px !important;
 }
+.mgv15 {
+  margin-top: 15px;
+  margin-bottom: 15px; 
+}
+.pdv15 {
+  padding-top: 15px;
+  padding-bottom: 15px; 
+}
 .pdl30 {
   padding-left: 30px !important;
 }
+.ht30 {
+  height: 30px;
+}
+.ht40 {
+  height: 40px;
+}
 .ht50 {
   height: 50px;
+}
+.ht100 {
+  height: 100px;
+}
+.ht150 {
+  height: 150px;
+}
+.ht200 {
+  height: 200px;
 }
 .fs20 {
   font-size: 20px;
@@ -38,6 +67,10 @@
   color: #337ab7;
 }
 
+
+.badge {
+  background-color: #e00f0f !important;
+}
 .google-maps {
     position: relative;
     padding-bottom: 35%; // This is the aspect ratio

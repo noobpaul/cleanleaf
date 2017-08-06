@@ -94,8 +94,10 @@ return [
     'custom' => [
         'attribute-name' => [
             'rule-name' => 'custom-message',
-        ],
+        ],        
     ],
+
+    'old_password' => 'The :attribute does not match.',
 
     /*
     |--------------------------------------------------------------------------
