@@ -42,7 +42,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <a href="{{ route('home') }}" data-toggle="tooltip" title="Home"><img alt="CLean Leaf Logo" src="{{ asset('img/logosample.png') }}" class="ht100 center-block mgv15"></a>
+                    <a href="{{ route('home') }}" data-toggle="tooltip" title="Home"><img alt="CLean Leaf Logo" src="{{ asset('img/logo3.png') }}" class="ht100 center-block mgv15"></a>
                 </div>
             </div>
             <div class="row mgb5">
