@@ -2,7 +2,7 @@
   <div class="container text-center">
     <div class="row">
       <div class="col-md-12">
-        <a class="hero-brand" href="index.html" title="Home"><img alt="CLean Leaf Logo" src="img/logosample.png"></a>
+        <a class="hero-brand" href="{{ route('home') }}" title="Home"><img alt="CLean Leaf Logo" src="{{ asset('img/logosample.png') }}"></a>
       </div>
     </div>
 

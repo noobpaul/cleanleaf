@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\User;
 use App\JobOrder;
+use App\Notifications;
 use Image;
 use PDF;
 use Mail;
@@ -14,7 +15,7 @@ class AdminController extends Controller
 {
 	public function __construct() {
 		$this->middleware('auth');
-		$this->middleware('admin', ['only' => ['adminRegisterView','adminRegisterPost','adminJobOrderAccept','adminJobOrderReject']]);
+		$this->middleware('admin', ['only' => ['adminRegisterView','adminRegisterPost','adminJobOrderPdf','adminJobOrderAccept','adminJobOrderReject']]);
 	}
 
     public function admin($username) {
@@ -31,20 +32,29 @@ class AdminController extends Controller
     	$user = User::where('username', $username)->first();
     	$this->validate($request, [
     		'name' => 'required|max:255',
-    		'username' => 'required|max:255',
             'role' => 'required|max:255',
             'email' => 'required|email|max:255|unique:users',
-            'password' => 'required|min:6',
-            'password_confirmation' => 'required|min:6',
     		]);
 
+        $password = str_random(6);
+
     	$new_user = new User;
-    	$new_user->name = $request->name;
-    	$new_user->username = $request->username;
-    	$new_user->email = $request->email;
-    	$new_user->role = $request->role;
-    	$new_user->password = bcrypt($request->password);
-    	$new_user->save();
+        $new_user->name = $request->name;
+        $new_user->email = $request->email;
+        $new_user->role = $request->role;
+        $new_user->password = bcrypt($password);
+        $new_user->save();
+
+        $username = strtolower(str_replace(' ', '', $request->name)) . $new_user->id;
+    	$saved_user = User::find($new_user->id);
+        $saved_user->username = $username;
+        $saved_user->update();
+
+        Mail::send('partials.mails.account', ['user' => $new_user, 'username' => $username, 'password' => $password], function ($message) use ($user,$new_user)
+        {
+            $message->from($user->email, $user->name);
+            $message->to($new_user->email);
+        });
 
     	return redirect()->route('adminRegisterView',$username)->with('user',$user);
     }
@@ -86,6 +96,13 @@ class AdminController extends Controller
             }
 
         });
+
+        foreach ($admins as $admin) {
+            $notif = new Notifications;
+            $notif->user_id = $admin->id;
+            $notif->status = 1;
+            $notif->save();
+        }
 
     	return redirect()->route('adminJobOrder',$user->username)->with('user',$user);
     }
@@ -158,25 +175,15 @@ class AdminController extends Controller
     public function adminPasswordUpdate(Request $request, $id) {
     	$user = User::find($id);
     	$this->validate($request,[
-    		'current_pw' => 'required|min:6|max:255',
-    		'new_pw' => 'required|min:6|max:255',
-    		'confirm_pw' => 'required|min:6|max:255',
+    		'old_password' => 'required|min:6|max:255|old_password:' . $user->password,
+    		'password' => 'required|min:6|max:255|confirmed',
     		]);
 
-    	if ($request->new_pw == $request->confirm_pw) {
-	    	if(\Hash::check($request->current_pw,$user->password)) {
-	    		$user->password = bcrypt($request->new_pw);
-	    		$user->update();
 
-		    	return redirect()->route('adminSettings',$user->username);
-	    	}
-	    	else {
-	    		return 'invalid current password!';
-	    	}
-    	}
-    	else {
-    		return 'confirmation password does not match!';
-    	}
+    		$user->password = bcrypt($request->password);
+    		$user->update();
+
+	    	return redirect()->route('adminSettings',$user->username);
     }
 
     public function adminImage(Request $request, $id) {
