@@ -8,16 +8,16 @@
     <nav id="nav-menu-container">
       <ul class="nav-menu">
         <li><a href="#about">About Us</a></li>
-        <!-- <li><a href="#">Services</a></li> -->
         <li><a href="#portfolio">Facilities and Equipments</a></li>
         <!-- <li><a href="#team">Officers</a></li> -->
         <li><a href="#contact">Contact Us</a></li>
+        <!-- <li><a href="{{ url('services') }}">Services</a></li> -->
       </ul>
     </nav><!-- #nav-menu-container -->
     
     <nav class="nav social-nav pull-right hidden-sm-down">
       @if(Auth::guest())
-        <button class="btn btn-default" data-toggle="modal" data-target="#login">Log In</button>
+        <button class="btn btn-success" data-toggle="modal" data-target="#login">Log In</button>
       @else
         <div class="dropdown">
           <a href="!#" id="dLabel" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

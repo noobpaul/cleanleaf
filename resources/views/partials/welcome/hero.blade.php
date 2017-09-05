@@ -5,7 +5,6 @@
         <a class="hero-brand" href="{{ route('home') }}" title="Home"><img alt="CLean Leaf Logo" src="{{ asset('img/logosample.png') }}"></a>
       </div>
     </div>
-
     <div class="col-md-12">
       <h1>
         Waste Management and Treatment, Materials Recovery, Storage and Disposal Facility

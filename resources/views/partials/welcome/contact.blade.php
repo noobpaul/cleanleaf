@@ -18,15 +18,35 @@
             <i class="fa fa-envelope"></i>
             <p>info.cleanleaf@gmail.com</p>
           </div>
-          <br>
+          
           <div>
             <i class="fa fa-phone"></i>
             <p>(02)990-6607/(02)961-6405<br>(02)962-8313</p>
           </div>
-          
+
+        <!-- Inquiry   -->
+        <label>Quick Inquiry</label><br>
+
+        <form action="{{ url('/') }}" method="POST">
+          {{ csrf_field() }}
+          <div style="padding-bottom: 5px;">
+            <input type="text" name="name_inq" class="form-control input-sm"  placeholder="Name">
+          </div>
+          <div style="padding-bottom: 5px;">
+            <input type="text" name="company_inq" class="form-control input-sm"  placeholder="Company">
+          </div>
+          <div style="padding-bottom: 5px;">
+            <input type="text" name="contact_inq" class="form-control input-sm"  placeholder="Contact Number or E-mail address">
+          </div>
+          <div style="padding-bottom: 5px;">
+            <textarea class="form-control input-sm" name="inq" placeholder="Inquiry"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-sm pull-right" id="send_inq"><span class="fa fa-paper-plane"></span> Send Inquiry</button><br>
+        </form>
+
         </div>
       </div>
-      
+            
       
         <div class="col-md-8 google-maps">
           <!-- Embedded Google Map -->
