@@ -255,6 +255,11 @@ a:hover {
   color: #fff;
 }
 
+.imgwrapper {
+  width: 100%;
+  margin: 0 auto;
+}
+
 /* ==================================================
   Header Styling
 ================================================== */
@@ -731,12 +736,12 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 .about-text-style{
   font-family: "Raleway", Helvetica, Arial, sans-serif;
-  font-size: 50px;
+  font-size: 5vh;
   color: #0c7515;
   font-weight: 800;  
 }
 .about-content-style{
-  font-size: 20px;
+  font-size: 3vh;
 }
 
 /* ==================================================
@@ -1126,4 +1131,12 @@ body.mobile-nav-active #mobile-nav-toggle {
     padding-left: 30px;
     padding-right: 30px;
   }
+}
+
+@media only screen and (max-width: 320px) {
+
+   .try { 
+      font-size: 2em; 
+   }
+
 }

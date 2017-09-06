@@ -41,14 +41,14 @@
           <div style="padding-bottom: 5px;">
             <textarea class="form-control input-sm" name="inq" placeholder="Inquiry"></textarea>
           </div>
-          <button type="submit" class="btn btn-primary btn-sm pull-right" id="send_inq"><span class="fa fa-paper-plane"></span> Send Inquiry</button><br>
-        </form>
+          <button type="submit" class="btn btn-primary btn-sm pull-left" id="send_inq"><span class="fa fa-paper-plane"></span> Send Inquiry</button><br>
+        </form> <br>
 
         </div>
       </div>
             
       
-        <div class="col-md-8 google-maps">
+        <div class="col-sm-6 col-xs-12 col-md-8 google-maps pull-right">
           <!-- Embedded Google Map -->
             <iframe class="" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3859.698762235561!2d121.01140291439762!3d14.673029189756392!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397b6c12af8e9c5%3A0xc74cec4a422bc3b!2sClean+Leaf+International+Corp.!5e0!3m2!1sen!2sph!4v1499204780191" frameborder="0" style="border:0" allowfullscreen></iframe>
         </div>

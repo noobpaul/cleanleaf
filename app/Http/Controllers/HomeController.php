@@ -46,4 +46,8 @@ class HomeController extends Controller
 
     }
 
+    public function about_company(){
+        return view('about_company');
+    }
+
 }

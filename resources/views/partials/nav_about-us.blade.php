@@ -1,21 +1,21 @@
 <header id="header">
-  <div class="container">
-  
-    <div id="logo" class="pull-left">
-      <a href="index"><img src="img/logo2sample.png" alt="" title="" /></img></a>
+    <div class="container">
+    <div class="pull-left">
+      <a href="{{ route('home') }}" ><img src="img/logo2sample.png" alt="" title="" /></img></a>
     </div>
-      
+    
+    <div>
     <nav id="nav-menu-container">
       <ul class="nav-menu">
-        <li><a href="#about">About Us</a></li>
-        <li><a href="#portfolio">Facilities and Equipments</a></li>
-        <!-- <li><a href="#team">Officers</a></li> -->
-        <li><a href="#contact">Contact Us</a></li>
+        <li><a href="{{ route('about') }}">The Company</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Careers</a></li>
         <!-- <li><a href="{{ url('services') }}">Services</a></li> -->
       </ul>
     </nav><!-- #nav-menu-container -->
+    </div> 
     
-    <nav class="nav social-nav pull-right hidden-sm-down">
+    <!-- <nav class="nav social-nav pull-right hidden-sm-down">
       @if(Auth::guest())
         <button class="btn btn-success" data-toggle="modal" data-target="#login">Log In</button>
       @else
@@ -44,5 +44,5 @@
         </div>
       @endif
     </nav>
-  </div>
+ --></div>
 </header>
