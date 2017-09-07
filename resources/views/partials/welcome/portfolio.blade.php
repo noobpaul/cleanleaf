@@ -34,7 +34,7 @@
           <div class="portfolio-over">
             <div>
               <h3 class="card-title">
-                Waste Water Facility
+                Wastewater Facility
               </h3>
 
    
@@ -60,11 +60,11 @@
 
       <div class="col-lg-3 col-sm-6 col-xs-12">
         <div class="card card-block">
-         <img alt="" src="img/redox.jpg">
+         <img alt="" src="img/distillation tank.jpg">
           <div class="portfolio-over">
             <div>
               <h3 class="card-title">
-                Redox 5S
+                Distillation Tanks
               </h3>
 
             </div>
@@ -90,11 +90,11 @@
 
       <div class="col-lg-3 col-sm-6 col-xs-12">
         <div class="card card-block">
-          <img alt="" src="img/electrical room.jpg">
+          <img alt="" src="img/redox4s.jpg">
           <div class="portfolio-over">
             <div>
               <h3 class="card-title">
-                Electrical Room
+                Redox 4s
               </h3>
 
             </div>
@@ -104,11 +104,11 @@
 
       <div class="col-lg-3 col-sm-6 col-xs-12">
         <div class="card card-block">
-         <img alt="" src="img/stockpiled.jpg">
+         <img alt="" src="img/reaction_tank.jpg">
           <div class="portfolio-over">
             <div>
               <h3 class="card-title">
-                Oil distillation Facility
+                Reaction Tanks
               </h3>
 
             </div>
@@ -122,6 +122,7 @@
           <div class="portfolio-over">
             <div>
               <h3 class="card-title">
+                Storage Area
               </h3>
 
             </div>

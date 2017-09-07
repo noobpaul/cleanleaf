@@ -744,6 +744,52 @@ body.mobile-nav-active #mobile-nav-toggle {
   font-size: 3vh;
 }
 
+.about-options-styling{
+  font-size: 3vh;
+  color: #0c7515;
+}
+
+.img_size{
+  width: 80%;
+  margin: 0 auto;
+}
+
+.img_size1{
+  width: 85%;
+  margin: 0 auto;
+}
+
+.img_size2{
+  width: 80%;
+  margin: 0 auto;
+}
+
+.div_shadow{
+  box-shadow: 5px 5px 10px #888888
+}
+
+.img-wrapper-a {
+    display: inline-block;
+}
+
+.img-wrapper-a img {
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -ms-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease;
+    vertical-align: middle;
+}
+
+.img-wrapper-a img:hover {
+    transform:scale(1.2);
+    -ms-transform:scale(1.2); /* IE 9 */
+    -moz-transform:scale(1.2); /* Firefox */
+    -webkit-transform:scale(1.2); /* Safari and Chrome */
+    -o-transform:scale(1.2); /* Opera */
+}
+
+
 /* ==================================================
   Portfolio Styling
   ================================================== */

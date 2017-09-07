@@ -7,11 +7,11 @@
       
     <nav id="nav-menu-container">
       <ul class="nav-menu">
-        <li><a href="#about">About Us</a></li>
-        <li><a href="#portfolio">Facilities and Equipments</a></li>
-        <!-- <li><a href="#team">Officers</a></li> -->
-        <li><a href="#contact">Contact Us</a></li>
-        <!-- <li><a href="{{ url('services') }}">Services</a></li> -->
+        <li><a href="{{route('home')}}#about">About Us</a></li>
+        <li><a href="{{route('services')}}">Services</a></li>
+        <li><a href="{{route('home')}}#portfolio">Facilities and Equipments</a></li>
+        <li><a href="{{route('home')}}#contact">Contact Us</a></li>
+        <li><a href="{{route('careers')}}">Careers</a></li>
       </ul>
     </nav><!-- #nav-menu-container -->
     
