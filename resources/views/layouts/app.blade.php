@@ -35,6 +35,8 @@
 
     <!-- Main Stylesheet File -->
     <link href="{{ asset('/css/style.css') }}" rel="stylesheet">
+
+    <link href="{{ asset('lib/css3-animate-it-master/css/animations.css') }}" rel="stylesheet">
     
   </head>
 
@@ -55,6 +57,7 @@
     <script src="{{ asset('lib/stickyjs/sticky.js') }}"></script>
     <script src="{{ asset('lib/parallax/parallax.js') }}"></script>
     <script src="{{ asset('lib/lockfixed/lockfixed.min.js') }}"></script>
+    <script src="{{ asset('lib/css3-animate-it-master/js/css3-animate-it.js') }}"></script>
     
     <script src="js/custom.js"></script>
     

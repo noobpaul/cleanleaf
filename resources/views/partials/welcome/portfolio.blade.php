@@ -1,15 +1,15 @@
-<section class="portfolio" id="portfolio">
+<section class="animatedParent animateOnce portfolio" id="portfolio">
   <div class="container text-center">
-    <h2>
+    <h2 class="animated fadeInDownShort">
       Facilities and Equipments
     </h2>
 
-    <p>
+    <p class="animated fadeInDownShort">
       Clean Leaf International Corporation has certified facilities equipped with an outstanding equipments and tools in doing its services.
     </p>
   </div>
 
-  <div class="portfolio-grid">
+  <div class="animated fadeIn portfolio-grid">
     <div class="row">
       <div class="col-lg-3 col-sm-6 col-xs-12">
         <div class="card card-block">
