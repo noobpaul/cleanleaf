@@ -1,4 +1,4 @@
-<section class="animatedParent animateOnce portfolio" id="portfolio">
+<section class="animatedParent animateOnce portfolio" data-appear-top-offset='-400' id="portfolio">
   <div class="container text-center">
     <h2 class="animated fadeInDownShort">
       Facilities and Equipments
@@ -9,7 +9,7 @@
     </p>
   </div>
 
-  <div class="animated fadeIn portfolio-grid">
+  <div class="portfolio-grid">
     <div class="row">
       <div class="col-lg-3 col-sm-6 col-xs-12">
         <div class="card card-block">

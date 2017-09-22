@@ -1,5 +1,5 @@
 <section id="contact">
-  <div class="animatedParent animateOnce container">
+  <div class="animatedParent animateOnce container" data-appear-top-offset='-400'>
     <div class="row animated fadeInDownShort">
       <div class="col-md-12 text-center">
         <h2 class="section-title">Contact Us</h2>
@@ -11,12 +11,12 @@
         <div class="animated fadeInLeftShort info">
           <div>
             <i class="fa fa-map-marker"></i>
-            <p>No. 232 Baesa Town Center<br>Quirino Highway, Quezon City</p>
+            <p>397 M.H Del Pilar, Maysilo, Malabon City</p>
           </div>
           
           <div>
             <i class="fa fa-envelope"></i>
-            <p>info.cleanleaf@gmail.com</p>
+            <p>info@cleanleaf.com.ph</p>
           </div>
           
           <div>
@@ -50,7 +50,7 @@
       
         <div class="animated fadeInRightShort col-sm-6 col-xs-12 col-md-8 google-maps pull-right">
           <!-- Embedded Google Map -->
-            <iframe class="" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3859.698762235561!2d121.01140291439762!3d14.673029189756392!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397b6c12af8e9c5%3A0xc74cec4a422bc3b!2sClean+Leaf+International+Corp.!5e0!3m2!1sen!2sph!4v1499204780191" frameborder="0" style="border:0" allowfullscreen></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3859.5600581295707!2d120.9566381146159!3d14.680890689751358!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397b46ba7b1c88f%3A0x39222f7ff67384cc!2sClean+Leaf+International+Corporation!5e0!3m2!1sen!2sph!4v1505118511918" width="0" height="0" frameborder="0" style="border:0" allowfullscreen></iframe>
         </div>
         
     </div>

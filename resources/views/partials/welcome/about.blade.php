@@ -1,5 +1,5 @@
 <section class="about about-style" id="about">
-  <div class="animatedParent animateOnce container text-center">
+  <div class="animatedParent animateOnce container text-center" data-appear-top-offset='-400'>
     <p class="animated fadeInDownShort about-text-style">
       About Clean Leaf International Corporation
     </p>

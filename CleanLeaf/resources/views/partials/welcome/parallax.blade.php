@@ -1,6 +1,8 @@
-<div class="block bg-primary block-pd-lg block-bg-overlay text-center" data-bg-img="img/parallax-bg.jpg" data-settings='{"stellar-background-ratio": 0.6}' data-toggle="parallax-bg">
- <h2 style="text-align: center;" class="col-lg-12">
+<div class="animatedParent animateOnce block bg-primary block-pd-lg block-bg-overlay text-center" data-appear-top-offset='-400' data-bg-img="img/parallax-bg.jpg" data-settings='{"stellar-background-ratio": 0.6}' data-toggle="parallax-bg">
+ <h2 class="col-lg-12" style="font-size: 2vw;">
     Clean Leaf International Corporation is a trusted TREATER and TRANSPORTER <br> industry by different organization and offices
  </h2>
-    <img alt="Clean Leaf Org" class="gadgets-img hidden-md-down" src="img/gov_bodies.png">
+ 	<div class="imgwrapper">
+    	<img alt="Clean Leaf Org" class="animated fadeInUpShort img-responsive center-block" src="img/gov_bodies.png">
+    </div>
 </div>

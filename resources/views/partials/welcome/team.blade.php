@@ -1,5 +1,8 @@
 <section class="team" id="team">
   <div class="container">
+  <br>
+  <br>
+  <br>
     <h2 class="text-center">
       Meet our Executives
     </h2>
@@ -98,4 +101,6 @@
       </div>
     </div>
   </div>
+  <br>
+  <br>
 </section>

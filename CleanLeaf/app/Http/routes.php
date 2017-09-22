@@ -17,6 +17,10 @@ Route::post('/', 'HomeController@postContact');
 
 Route::get('/services', 'HomeController@services')->name('services');
 
+Route::get('/careers', 'HomeController@careers')->name('careers');
+
+Route::get('/about_company', 'HomeController@about_company')->name('about');
+
 Route::auth();
 
 Route::get('admin/{username}', 'AdminController@admin')->name('admin');
